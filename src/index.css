@@ -5,5 +5,10 @@
   display: grid;
 }
 .heade{
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-around;
+  padding: 15px 15px;
+  align-items: center;
+
 }
