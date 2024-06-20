@@ -1,13 +1,19 @@
+import { SlMenu } from "react-icons/sl";
+import { AiOutlineLogin } from "react-icons/ai";
+
+
 
 const Header = () => {
     return (
         <>
             <div className="heade">
                 <div className="right-buttons">
-                    <button className="button">Header</button>
+                    <button className="button"><SlMenu/></button>
                 </div>
                 <div className="left-buttons">
-                    <button className="button">Login</button>
+                    <button className="button">Login
+                        <AiOutlineLogin />
+                    </button>
                     <button className="button">register</button>
                 </div>
             </div>

@@ -1,14 +1,45 @@
-.body{
-  background-color: aqua;
+body{
+  background-color: rgb(101, 121, 121);/*Color de fondo*/
 }
+/*Estilo para el contenedor principal del encabezado*/
 .header{
-  display: grid;
+  display: grid; /*Se utiliza el css grid para el diseño*/
 }
+/*Estilo para el contenedor principal del encabezado interno*/
 .heade{
   display: grid;
-  grid-template-columns: 1fr auto;
-  justify-content: space-around;
-  padding: 15px 15px;
-  align-items: center;
+  grid-template-columns: 1fr auto; /*Dos columnas: una ocupa todo el espacio restante y otra automatica*/
+  justify-content: space-around; /*DIstribuimos el contenido de forma uniforme*/
+  padding: 15px 5%;
+  align-items: center; /*Alinea los elementos al centro*/
+}
+/*Estilo para el contenedor de los botones izquierdos*/
+.left-buttons{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;/*Espacio entre los botones*/
+}
+.heade-button{
+  justify-self: end;
+}
+.button-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+.button{
+  padding: 10px 20px;
+  background-color: #b6a6a6;
+  border-radius: 5px;
+  border: 0px solid #ccc;
+}
 
+@media(max-width: 768px){
+  .heade{
+    padding: 10px;
+    grid-template-columns: fr;
+  }
+  .heade-button{
+    justify-self:center;
+  }
 }
