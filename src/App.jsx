@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Menu from "./components/Menu"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
     <div className="app-container">
     <Header />
+    <Menu/>
     <Footer />
     </div>
     </>

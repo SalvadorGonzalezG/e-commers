@@ -1,47 +1,69 @@
-body{
-  background-color: rgb(101, 121, 121);/*Color de fondo*/
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(101, 121, 121); /* Color de fondo */
 }
-/*Estilo para el contenedor principal del encabezado*/
-.app-container{
+
+.app-container {
   display: grid;
-  /*grid-template-columns: auto 1fr auto; /*Define 3 filas: header, contenido y footer*/
-  /*min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+  grid-template-rows: auto 1fr auto; /* Filas para header, contenido y footer */
+  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
 }
-/*Estilo para el contenedor principal del encabezado interno*/
-.heade{  
+
+.header {
+  background-color: rgb(45, 72, 95);
   display: grid;
-  grid-template-columns: 1fr auto; /*Dos columnas: una ocupa todo el espacio restante y otra automatica*/
-  justify-content: space-around; /*DIstribuimos el contenido de forma uniforme*/
-  padding: 15px 5%;
-  align-items: center; /*Alinea los elementos al centro*/
+  grid-template-columns: auto auto auto; /* Dos columnas: una ocupa todo el espacio restante y otra automática */
+  justify-content: space-around; /* Distribuye el contenido de forma uniforme */
+  padding: 10px 5%;
+  align-items: center; /* Alinea los elementos al centro */
 }
-/*Estilo para el contenedor de los botones izquierdos*/
-.left-buttons{
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;/*Espacio entre los botones*/
-}
-.heade-button{
-  justify-self: end;
-}
-.button-container{
+
+.left-buttons {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 20px; /* Espacio entre los botones */
 }
-.button{
+
+.right-buttons {
+  display: grid;
+}
+
+.button {
   padding: 10px 20px;
   background-color: #b6a6a6;
   border-radius: 5px;
   border: 0px solid #ccc;
 }
 
-@media(max-width: 768px){
-  .heade{
+.menu {
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo del menú */
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+  background-color: aqua;
+}
+
+@media (max-width: 768px) {
+  .header {
     padding: 10px;
-    grid-template-columns: fr;
+    grid-template-columns: 1fr;
+   
   }
-  .heade-button{
-    justify-self:center;
+
+  .header .right-buttons, .header .left-buttons {
+    justify-content: center;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

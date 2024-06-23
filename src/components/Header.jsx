@@ -6,7 +6,7 @@ import { AiOutlineLogin } from "react-icons/ai";
 const Header = () => {
     return (
         <>
-            <div className="heade">
+            <div className="header">
                 <div className="right-buttons">
                     <button className="button"><SlMenu/></button>
                 </div>
