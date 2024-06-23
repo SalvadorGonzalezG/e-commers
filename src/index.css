@@ -2,11 +2,13 @@ body{
   background-color: rgb(101, 121, 121);/*Color de fondo*/
 }
 /*Estilo para el contenedor principal del encabezado*/
-.header{
-  display: grid; /*Se utiliza el css grid para el diseño*/
+.app-container{
+  display: grid;
+  /*grid-template-columns: auto 1fr auto; /*Define 3 filas: header, contenido y footer*/
+  /*min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
 }
 /*Estilo para el contenedor principal del encabezado interno*/
-.heade{
+.heade{  
   display: grid;
   grid-template-columns: 1fr auto; /*Dos columnas: una ocupa todo el espacio restante y otra automatica*/
   justify-content: space-around; /*DIstribuimos el contenido de forma uniforme*/
