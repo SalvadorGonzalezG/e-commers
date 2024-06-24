@@ -16,16 +16,16 @@ body {
 .header {
   background-color: rgb(45, 72, 95);
   display: grid;
-  grid-template-columns: auto auto auto; /* Dos columnas: una ocupa todo el espacio restante y otra automática */
-  justify-content: space-around; /* Distribuye el contenido de forma uniforme */
-  padding: 10px 5%;
-  align-items: center; /* Alinea los elementos al centro */
+  grid-template-columns:auto auto ; /* Dos columnas: una ocupa todo el espacio restante y otra automática */
+  justify-content:space-between; /* Distribuye el contenido de forma uniforme */
+  padding: 1% 2%;
+  align-items:center; /* Alinea los elementos al centro */
 }
 
 .left-buttons {
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px; /* Espacio entre los botones */
+  grid-template-columns: auto auto ;
+  gap: 10%; /* Espacio entre los botones */
 }
 
 .right-buttons {
@@ -33,7 +33,7 @@ body {
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 10px 18px;
   background-color: #b6a6a6;
   border-radius: 5px;
   border: 0px solid #ccc;
@@ -53,13 +53,13 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    padding: 10px;
-    grid-template-columns: 1fr;
+    padding: 20px;
+    grid-template-columns: 1fr 85% ;
    
   }
 
   .header .right-buttons, .header .left-buttons {
-    justify-content: center;
+    justify-content:end;
   }
 
   .button {

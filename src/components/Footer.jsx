@@ -1,7 +1,9 @@
+import { FaTelegramPlane } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
-    <footer className="footer">Footer</footer>
+    <footer className="footer">Footer <FaTelegramPlane/></footer>
   )
 }
 

@@ -1,8 +1,7 @@
 import { SlMenu } from "react-icons/sl";
 import { AiOutlineLogin } from "react-icons/ai";
-
-
-
+import { AiOutlineIdcard } from "react-icons/ai";
+<s></s>
 const Header = () => {
     return (
         <>
@@ -14,7 +13,9 @@ const Header = () => {
                     <button className="button">Login
                         <AiOutlineLogin />
                     </button>
-                    <button className="button">register</button>
+                    <button className="button">register
+                        <AiOutlineIdcard />
+                    </button>
                 </div>
             </div>
         </>
