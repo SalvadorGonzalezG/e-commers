@@ -33,7 +33,7 @@ body {
 }
 
 .button {
-  padding: 10px 18px;
+  padding: 10px 20px;
   background-color: #b6a6a6;
   border-radius: 5px;
   border: 0px solid #ccc;
@@ -42,7 +42,7 @@ body {
 .menu {
   overflow-y: auto; /* Habilita el desplazamiento vertical */
   padding: 20px;
-  background-color: #f9f9f9; /* Fondo del menú */
+  background-color: #da6262; /* Fondo del menú */
 }
 
 .footer {
