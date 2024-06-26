@@ -6,6 +6,7 @@ const Search = () => {
         <>
             <div>
                 <input
+                    className="btnsearch"
                     type="search"
                     placeholder="Buscar" />
                 <button className="searchbtn"><CiSearch /></button>

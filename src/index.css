@@ -41,11 +41,17 @@ body {
   justify-content:center; /* Centra el buscador horizontalmente */
   
 }
+.btnsearch{
+  padding: 2px 6px ;
+  border-radius: 5px;
+  border: none;
+}
 .searchbtn{
-  padding: 4px 10px;
+  padding: 2px 6px;
   background-color: #b6a6a6;
   border-radius: 5px;
   border: none;
+  
 }
 
 .menu {
@@ -62,25 +68,30 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    grid-template-columns: 1fr 1fr; /* Una columna en pantallas pequeñas */
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     gap: 5px;
+    justify-content: center; /* Centra los elementos horizontalmente */
   }
 
-  .right-buttons, .left-buttons {
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content:flex-end; /* Centra los botones horizontalmente */
+  .left-buttons {
+    gap: 7px;
+    grid-template-columns: 1fr 1fr; /* Una columna para los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+  }
+  .right-buttons{
+    grid-template-columns: 1fr ;
+    order: 1;
   }
 
   .button {
     width: auto;
     margin-bottom: 5px;
-
   }
 
   .search-container {
     order: 2; /* Mueve el buscador debajo de los botones */
-    width: auto;
+    width: 100%; /* Ocupa todo el ancho disponible */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra el buscador horizontalmente */
   }
 }
