@@ -16,27 +16,36 @@ body {
 .header {
   background-color: rgb(45, 72, 95);
   display: grid;
-  grid-template-columns:auto auto ; /* Dos columnas: una ocupa todo el espacio restante y otra automática */
-  justify-content:space-between; /* Distribuye el contenido de forma uniforme */
+  grid-template-columns: auto 1fr auto; /* Tres columnas: botones, búsqueda y botones */
+  gap: 20px; /* Espacio entre los elementos */
+  align-items: center; /* Alinea los elementos al centro verticalmente */
   padding: 1% 2%;
-  align-items:center; /* Alinea los elementos al centro */
 }
 
-.left-buttons {
-  display: grid;
-  grid-template-columns: auto auto ;
-  gap: 10%; /* Espacio entre los botones */
-}
-
+.left-buttons,
 .right-buttons {
   display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px; /* Espacio entre los botones */
 }
 
 .button {
   padding: 10px 20px;
   background-color: #b6a6a6;
   border-radius: 5px;
-  border: 0px solid #ccc;
+  border: none;
+}
+
+.search-container {
+  display: flex;
+  justify-content:center; /* Centra el buscador horizontalmente */
+  
+}
+.searchbtn{
+  padding: 4px 10px;
+  background-color: #b6a6a6;
+  border-radius: 5px;
+  border: none;
 }
 
 .menu {
@@ -53,17 +62,25 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    padding: 20px;
-    grid-template-columns: 1fr 85% ;
-   
+    grid-template-columns: 1fr 1fr; /* Una columna en pantallas pequeñas */
+    gap: 5px;
   }
 
-  .header .right-buttons, .header .left-buttons {
-    justify-content:end;
+  .right-buttons, .left-buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content:flex-end; /* Centra los botones horizontalmente */
   }
 
   .button {
-    width: 100%;
-    margin-bottom: 10px;
+    width: auto;
+    margin-bottom: 5px;
+
+  }
+
+  .search-container {
+    order: 2; /* Mueve el buscador debajo de los botones */
+    width: auto;
+    display: flex;
+    justify-content: center;
   }
 }

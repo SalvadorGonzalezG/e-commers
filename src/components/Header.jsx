@@ -11,7 +11,9 @@ const Header = () => {
                 <div className="right-buttons">
                     <button className="button"><SlMenu/></button>
                 </div>
-                
+                <div className="search-container">
+                    <Search/>                    
+                </div>
                 <div className="left-buttons">
                     <button className="button">Login
                         <AiOutlineLogin />
@@ -24,5 +26,4 @@ const Header = () => {
         </>
     )
 }
-
 export default Header
