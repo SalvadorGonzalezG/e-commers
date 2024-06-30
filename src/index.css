@@ -17,7 +17,7 @@ body {
   background-color: rgb(45, 72, 95);
   display: grid;
   grid-template-columns: auto 1fr auto; /* Tres columnas: botones, búsqueda y botones */
-  gap: 20px; /* Espacio entre los elementos */
+  gap: 10px; /* Espacio entre los elementos */
   align-items: center; /* Alinea los elementos al centro verticalmente */
   padding: 1% 2%;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 .menu-container {
-  width: 100%;
+  width: auto;
   padding: 20px;
   /*display: flex;
   overflow-y: auto; /* Habilita el desplazamiento vertical */
@@ -68,13 +68,12 @@ body {
 }
 .grid-container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
 }
 .grid-item {
-  width: 100px;
-  height: 100px;
+  margin: 8px 6px;/*Espacio entre filas y columnas*/ 
+  height: 350px;
   background-color: lightblue;
   display: flex;
   justify-content: center;
@@ -101,6 +100,7 @@ body {
 
 @media (max-width: 768px) {
   .header {
+    width: auto;
     grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     gap: 5px;
     justify-content: center; /* Centra los elementos horizontalmente */
