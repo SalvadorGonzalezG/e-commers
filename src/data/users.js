@@ -1,4 +1,5 @@
 // inicializaremos un archivo .json para poder usarlo como una pequeña base de datos y poder hacer peticiones get con el mismo.
+import rea from '../assets/react.svg'
 
 export const usersData = [
     {
@@ -6,7 +7,9 @@ export const usersData = [
         name: 'Robert',
         age: 23,
         mail: 'rob@CiMail.com',
-        pais: 'cdmx'
+        pais: 'cdmx',
+        img: `${rea}`
+
     },{
         id: 2,
         name: 'Will',
