@@ -8,7 +8,7 @@ const Search = () => {
                 <input
                     className="btnsearch"
                     type="search"
-                    placeholder="Buscar" />
+                    placeholder= "buscar"/>
                 <button className="searchbtn"><CiSearch /></button>
             </div>
         </>
