@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Menu from "./components/Menu"
+import SubHeader from "./components/SubHeader"
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <>
     <div className="app-container">
     <Header />
-    <Menu/>
+    <SubHeader />
+    <Menu />
     <Footer />
     </div>
     </>
