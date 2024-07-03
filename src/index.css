@@ -77,9 +77,13 @@ body {
   height: 400px;
   background-color: lightblue;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /*Apilar elementos de forma vertical*/
+  justify-content: flex-start; /*Alinear los elementos al principio*/
+  /*justify-content: center;*/
   align-items: center;
   font-size: 1rem;
+  padding: 5%; /* Añadir padding para separar los elementos del borde */
+  box-sizing: border-box; /* Incluir padding y borde en el tamaño total del elemento */
 }
 /*
 .menu-container > div {

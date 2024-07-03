@@ -56,9 +56,19 @@ const Menu = () => {
           {items.length === 0 && !loading && <p>No items to display.</p>}
           {items.map((item, index) => (
             <div key={index} className="grid-item">
-              <img src={item.img} alt="" />
-              <h1>{item.id}</h1>
-              <p>name: {item.name}</p>
+              <div><img src={item.img} alt="" /></div>
+    
+              <div>
+                <p>
+                  <h2>id: {item.id}</h2>
+                  name: {item.name} <br />
+                  age: {item.age} <br />
+                  pais: {item.pais}
+                </p>
+                <h4>
+                  @mail: {item.mail}
+                </h4>
+              </div>
             </div>
           ))}
         </div>
