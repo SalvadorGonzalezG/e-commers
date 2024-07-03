@@ -1,5 +1,5 @@
 // inicializaremos un archivo .json para poder usarlo como una pequeña base de datos y poder hacer peticiones get con el mismo.
-import rea from '../assets/react.svg'
+//import rea from '../assets/react.svg'
 import ai from '../assets/ai.jpg'
 import ai1 from '../assets/ai1.jpg'
 import ai2 from '../assets/ai2.jpg'
@@ -13,6 +13,7 @@ import ai9 from '../assets/ai9.jpg'
 import ai10 from '../assets/ai10.jpg'
 import ai11 from '../assets/ai11.jpg'
 
+// Array usuarios (datos.)
 export const usersData = [
     {
         id: 1,
@@ -20,7 +21,7 @@ export const usersData = [
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${rea}`
+        img: `${ai11}`
 
     },{
         id: 2,

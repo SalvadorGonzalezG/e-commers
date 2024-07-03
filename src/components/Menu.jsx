@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 //import axios from 'axios'
 import {usersData} from '../data/users' 
+import { GiShoppingCart } from "react-icons/gi";
 
 
 const Menu = () => {
@@ -56,18 +57,19 @@ const Menu = () => {
           {items.length === 0 && !loading && <p>No items to display.</p>}
           {items.map((item, index) => (
             <div key={index} className="grid-item">
-              <div><img src={item.img} alt="" /></div>
+              <div><img className='img-central' src={item.img} alt="img" /></div>
     
               <div>
                 <p>
-                  <h2>id: {item.id}</h2>
-                  name: {item.name} <br />
-                  age: {item.age} <br />
-                  pais: {item.pais}
+                  <h2> <i>ID:</i> {item.id}</h2>
+                  <i>name</i> {item.name} <br />
+                  <i>age:</i> {item.age} <br />
+                  <i>pais:</i> {item.pais} <br />
+                  <b>
+                  <i>@mail</i> {item.mail}
+                  </b>
                 </p>
-                <h4>
-                  @mail: {item.mail}
-                </h4>
+                <button className='btn-buy'><GiShoppingCart/> agregar</button>
               </div>
             </div>
           ))}

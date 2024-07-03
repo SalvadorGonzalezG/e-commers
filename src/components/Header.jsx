@@ -1,6 +1,6 @@
 import { SlMenu } from "react-icons/sl";
 import { AiOutlineLogin } from "react-icons/ai";
-import { AiOutlineIdcard } from "react-icons/ai";
+import { IoCartOutline } from "react-icons/io5";
 import Search from "./Search"; // componente para realizar busquedad
 
 <s></s>
@@ -18,8 +18,7 @@ const Header = () => {
                     <button className="button">Login
                         <AiOutlineLogin />
                     </button>
-                    <button className="button">register
-                        <AiOutlineIdcard />
+                    <button className="button"><IoCartOutline/>
                     </button>
                 </div>
             </div>
