@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 //import axios from 'axios'
 import {usersData} from '../data/users' 
 import { GiShoppingCart } from "react-icons/gi";
+import { IoAdd } from "react-icons/io5";
 
 
 const Menu = () => {
@@ -57,6 +58,7 @@ const Menu = () => {
           {items.length === 0 && !loading && <p>No items to display.</p>}
           {items.map((item, index) => (
             <div key={index} className="grid-item">
+              <div className='more-info'><button><IoAdd/></button></div>
               <div><img className='img-central' src={item.img} alt="img" /></div>
     
               <div>
