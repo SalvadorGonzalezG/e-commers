@@ -3,7 +3,6 @@ import { AiOutlineLogin } from "react-icons/ai";
 import { IoCartOutline } from "react-icons/io5";
 import Search from "./Search"; // componente para realizar busquedad
 
-<s></s>
 const Header = () => {
     return (
         <>
