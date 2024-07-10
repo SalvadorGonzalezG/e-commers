@@ -66,7 +66,8 @@ const Menu = () => {
                 <img className='img-central' src={item.img} alt="img" />
               </div>
               <div className='contenido'>
-                <p>
+                <section>
+
                   <h2> <i>ID:</i> {item.id}</h2>
                   <i>name</i> {item.name} <br />
                   <i>age:</i> {item.age} <br />
@@ -74,9 +75,27 @@ const Menu = () => {
                   <b>
                     <i>@mail</i> {item.mail}
                   </b>
-                </p>
-                <button className='btn-buy'><GiShoppingCart /> agregar</button>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                </section>
               </div>
+              <button className='btn-buy'><GiShoppingCart /> agregar</button>
             </div>
           ))}
         </div>
