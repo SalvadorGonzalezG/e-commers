@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 //import axios from 'axios'
-import {usersData} from '../data/users' 
+import { usersData } from '../data/users'
 import { GiShoppingCart } from "react-icons/gi";
 import { IoAdd } from "react-icons/io5";
 
@@ -12,7 +12,7 @@ const Menu = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-  // Simula la carga de datos al montar el componente
+    // Simula la carga de datos al montar el componente
     fetchItems();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -23,7 +23,7 @@ const Menu = () => {
 
   const fetchItems = () => {
     setLoading(true);
-  // Utiliza los datos importantes directamente 
+    // Utiliza los datos importantes directamente 
     try {
       //const response = await axios.get(usersData.json);
       const data = usersData;
@@ -58,20 +58,24 @@ const Menu = () => {
           {items.length === 0 && !loading && <p>No items to display.</p>}
           {items.map((item, index) => (
             <div key={index} className="grid-item">
-              <div className='more-info'><button><IoAdd/></button></div>
-              <div><img className='img-central' src={item.img} alt="img" /></div>
-    
+              <div className='more-info'>
+                <button><IoAdd />
+                </button>
+              </div>
               <div>
+                <img className='img-central' src={item.img} alt="img" />
+              </div>
+              <div className='contenido'>
                 <p>
                   <h2> <i>ID:</i> {item.id}</h2>
                   <i>name</i> {item.name} <br />
                   <i>age:</i> {item.age} <br />
                   <i>pais:</i> {item.pais} <br />
                   <b>
-                  <i>@mail</i> {item.mail}
+                    <i>@mail</i> {item.mail}
                   </b>
                 </p>
-                <button className='btn-buy'><GiShoppingCart/> agregar</button>
+                <button className='btn-buy'><GiShoppingCart /> agregar</button>
               </div>
             </div>
           ))}

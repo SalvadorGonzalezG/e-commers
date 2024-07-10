@@ -101,7 +101,7 @@ div > button:hover{
 }
 .grid-item {
   border-radius: 10px;
-  margin: 8px 6px;/*Espacio entre filas y columnas*/ 
+  margin: 7px 6px;/*Espacio entre filas y columnas*/ 
   height: 400px;
   background-color: rgb(181, 206, 214);
   display: flex;
@@ -110,7 +110,7 @@ div > button:hover{
   /*justify-content: center;*/
   align-items: center;
   font-size: 1rem;
-  padding: 2%; /* Añadir padding para separar los elementos del borde */
+  padding: 1%; /* Añadir padding para separar los elementos del borde */
   box-sizing: border-box; /* Incluir padding y borde en el tamaño total del elemento */
 }
 .more-info{
@@ -153,6 +153,10 @@ margin-bottom: 2px;
   padding: 10px;
   text-align: center;
   background-color: aqua;
+}
+.contenido{
+  background-color: blue;
+  width: 300px;
 }
 
 @media (max-width: 824px) {
