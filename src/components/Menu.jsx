@@ -93,9 +93,16 @@ const Menu = () => {
                   <b>
                     <i>@mail</i> {item.mail}
                   </b>
+                  <b>
+                    <i>@mail</i> {item.mail}
+                  </b>
+                
+                  
+              
                 </section>
+                <button className='btn-buy'><GiShoppingCart /> agregar</button>
               </div>
-              <button className='btn-buy'><GiShoppingCart /> agregar</button>
+              
             </div>
           ))}
         </div>

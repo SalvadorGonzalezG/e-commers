@@ -97,19 +97,22 @@ div > button:hover{
 .grid-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px; /*Espacio entre tarjetas*/
+  justify-content: center;
 }
 .grid-item {
-  display: flex; /* Modificación: Añadir flexbox */
-  flex-direction: column; /* Modificación: Colocar elementos en columna */
-  justify-content: space-between; /* Modificación: Distribuir espacio entre elementos */
-  background-color: #f9f9f9;
-  border: 2px solid none;
-  border-radius: 8px;
-  padding: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  margin: 7px 6px;/*Espacio entre filas y columnas*/ 
+  /*height: 400px;*/
+  background-color: rgb(181, 206, 214);
+  display: flex;
+  flex-direction: column; /*Apilar elementos de forma vertical*/
+  justify-content: space-between; /*Alinear los elementos al principio*/
+  /*justify-content: center;*/
+  align-items: center;
+  font-size: 1rem;
+  padding: 1%; /* Añadir padding para separar los elementos del borde */
+  box-sizing: border-box; /* Incluir padding y borde en el tamaño total del elemento */
 }
 .more-info{
 margin-left: auto; /*ocupa todo el espacio disponible de la izquierda ya que este boton esta empujando al final del contenedor debido al margen automatico izquierdo que ocupa todo el espacio sobrante.*/
@@ -151,27 +154,20 @@ margin-bottom: 2px;
 }
 .contenido{
   background-color: rgb(255, 255, 255);
-  
-}
-.btn-container{
-  position:sticky;
-  padding: 0;
-  
+  width: 350px;
+  flex: 1; /* Toma todo el espacio disponible */
 }
 .btn-buy{
-  margin-top: 5px;
+  margin-top: 2px;
   border-radius: 5px;
   border: none;
-  background-color: #007bff;
-  padding: 4px 7px;
+  padding: 3px auto;
   cursor: pointer;
-  color: white;
-  align-self: center; /* Modificación: Alinear el botón al final de la tarjeta */
+  align-self: center;
 }
-.btn-buy:hover {
-  background-color: #76a0ce;
+.btn-buy:hover{
+  background-color: rgb(91, 160, 197);
 }
-
 @media (max-width: 824px) {
   .grid-container {
     display: grid;
