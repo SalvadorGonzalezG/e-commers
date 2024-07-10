@@ -1,3 +1,4 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { SlMenu } from "react-icons/sl";
 import { AiOutlineLogin } from "react-icons/ai";
 import { IoCartOutline } from "react-icons/io5";
