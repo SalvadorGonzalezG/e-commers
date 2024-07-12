@@ -7,24 +7,27 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
 
 function App() {
-  
- 
+  {/*Estado para controlar si se se muestra el Menu o el Login */}
+ const [isLogin, setIsLogin] = useState(false)
 
+ const handleLoginClick = () =>{
+  setIsLogin(true)
+ }
   return (
     <>
 {/*Peparando el enrutador */}
     <Router>
         <div className="app-container">
 {/*Pasando el prop de forma correcta para que al dar click en el boton el componente se renderice*/}
-          <Header/>
+          <Header onLoginClick={handleLoginClick} />
 
           <SubHeader />
           <Routes>
-            <Route path="/" element={<Menu/>} />
-            <Route path="/" element={<Login/>}/>
+            <Route path="/" element={isLogin ? <Login/> :<Menu/>} />
+            <Route path="/login" element={<Login/>}/>
           </Routes>
 
-          <Menu/>
+          
 
           <Footer />
 

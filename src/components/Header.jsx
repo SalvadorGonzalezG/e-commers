@@ -1,12 +1,19 @@
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import { SlMenu } from "react-icons/sl";
 import { AiOutlineLogin } from "react-icons/ai";
 import { IoCartOutline } from "react-icons/io5";
 import Search from "./Search"; // componente para realizar busquedad
 
 /* Pasamos los props que se van a comunicar */
-const Header = () => {
-    
+const Header = ({onLoginClick}) => {
+    //funcion para navegar mediante react-router
+    const navigate = useNavigate();
+
+    const handleLoginClick=()=>{
+        onLoginClick();
+        navigate('/login')
+    }
+
     return (
         <>
             <div className="header">
@@ -17,7 +24,7 @@ const Header = () => {
                     <Search/>                    
                 </div>
                 <div className="left-buttons">
-                    <button  className="button">Login
+                    <button onClick={handleLoginClick} className="button">Login
                         <AiOutlineLogin />
                     </button>
                     <button className="button"><IoCartOutline/>

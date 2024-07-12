@@ -9,8 +9,9 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Filas para header, contenido y footer */
+  grid-template-rows: auto auto 1fr auto; /* Filas para header, contenido y footer */
   height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  
 }
 
 .header {
@@ -18,14 +19,15 @@ body {
   display: grid;
   grid-template-columns: auto 1fr auto; /* Tres columnas: botones, búsqueda y botones */
   gap: 10px; /* Espacio entre los elementos */
-  align-items: center; /* Alinea los elementos al centro verticalmente */
+  align-items: auto; /* Alinea los elementos al centro verticalmente */
   padding: 1% 2%;
 }
 .sub-header{
   display: flex;
   background-color: rgb(110, 147, 185);
-  justify-content: flex-end; /*colocamos los items(divs) hasta la izquierda*/
+  justify-content:center; /*colocamos los items(divs) hasta la izquierda*/
   align-items: center;
+  height: 35px;
 }
 .sub-header > div{
   padding: 4px 5px;
@@ -97,7 +99,7 @@ div > button:hover{
 .grid-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px; /*Espacio entre tarjetas*/
+  grid-gap: auto auto; /*Espacio entre tarjetas*/
   justify-content: center;
 }
 .grid-item {
@@ -107,12 +109,13 @@ div > button:hover{
   background-color: rgb(181, 206, 214);
   display: flex;
   flex-direction: column; /*Apilar elementos de forma vertical*/
-  justify-content: space-between; /*Alinear los elementos al principio*/
+  justify-content: flex-start; /*Alinear los elementos al principio*/
   /*justify-content: center;*/
   align-items: center;
   font-size: 1rem;
   padding: 1%; /* Añadir padding para separar los elementos del borde */
   box-sizing: border-box; /* Incluir padding y borde en el tamaño total del elemento */
+
 }
 .more-info{
 margin-left: auto; /*ocupa todo el espacio disponible de la izquierda ya que este boton esta empujando al final del contenedor debido al margen automatico izquierdo que ocupa todo el espacio sobrante.*/
@@ -151,6 +154,7 @@ margin-bottom: 2px;
   padding: 10px;
   text-align: center;
   background-color: aqua;
+ 
 }
 .contenido{
   background-color: rgb(255, 255, 255);
@@ -168,6 +172,8 @@ margin-bottom: 2px;
 .btn-buy:hover{
   background-color: rgb(91, 160, 197);
 }
+.login-container{
+}
 @media (max-width: 824px) {
   .grid-container {
     display: grid;
@@ -178,6 +184,7 @@ margin-bottom: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
 }
 
