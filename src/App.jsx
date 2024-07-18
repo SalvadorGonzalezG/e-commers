@@ -3,6 +3,7 @@ import Footer from "./components/Footer"
 import Menu from "./components/Menu"
 import SubHeader from "./components/SubHeader"
 import Login from "./pages/Login"
+import Car from "./pages/Car" // importando el compornente car.
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
 
@@ -25,9 +26,8 @@ function App() {
           <Routes>
             <Route path="/" element={isLogin ? <Login/> :<Menu/>} />
             <Route path="/login" element={<Login/>}/>
+            <Route path='/car' element={<Car/>} /> {/*Rota para el carrito de compras */}
           </Routes>
-
-          
 
           <Footer />
 

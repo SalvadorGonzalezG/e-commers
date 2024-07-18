@@ -13,6 +13,9 @@ const Header = ({onLoginClick}) => {
         onLoginClick();
         navigate('/login')
     }
+    const handleCarClick=()=>{
+        navigate('/car')
+    }
 
     return (
         <>
@@ -27,7 +30,7 @@ const Header = ({onLoginClick}) => {
                     <button onClick={handleLoginClick} className="button">Login
                         <AiOutlineLogin />
                     </button>
-                    <button className="button"><IoCartOutline/>
+                    <button onClick={handleCarClick} className="button"><IoCartOutline/>
                     </button>
                 </div>
             </div>
