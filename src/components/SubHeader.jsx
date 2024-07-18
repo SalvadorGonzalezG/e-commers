@@ -6,14 +6,20 @@ const SubHeader = () => {
   const handleAyudaClick=()=>{
     navigate('/ayuda')
   }
+  const handleOutletClick=()=>{
+    navigate('/outlet')
+  }
+  const handleDescuentoClick = () => {
+    navigate('/descuentos')
+  }  
   return (
     <>
     <div className='sub-header'>
         <div>
-            <button>Outlet</button>
+            <button onClick={handleOutletClick}>Outlet</button>
         </div>
         <div>
-            <button>Descuentos</button>
+            <button onClick={handleDescuentoClick}>Descuentos</button>
         </div>
         <div>
             <button onClick={handleAyudaClick}>Ayuda</button>

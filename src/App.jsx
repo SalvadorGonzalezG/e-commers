@@ -5,6 +5,8 @@ import SubHeader from "./components/SubHeader"
 import Login from "./pages/Login"
 import Car from "./pages/Car" // importando el compornente car.
 import Ayuda from "./pages/Ayuda"
+import Outlet from "./pages/Outlet"
+import Descuentos from "./pages/Descuentos"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
 
@@ -29,6 +31,8 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path='/car' element={<Car />}/> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
             <Route path="/ayuda" element={<Ayuda/>}/>
+            <Route path='/outlet' element={<Outlet/>} />
+            <Route path="descuentos" element={<Descuentos/>} />
           </Routes>
 
           <Footer />
