@@ -4,6 +4,7 @@ import Menu from "./components/Menu"
 import SubHeader from "./components/SubHeader"
 import Login from "./pages/Login"
 import Car from "./pages/Car" // importando el compornente car.
+import Ayuda from "./pages/Ayuda"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
 
@@ -26,7 +27,8 @@ function App() {
           <Routes>
             <Route path="/" element={isLogin ? <Login/> :<Menu/>} />
             <Route path="/login" element={<Login/>}/>
-            <Route path='/car' element={<Car/>} /> {/*Rota para el carrito de compras */}
+            <Route path='/car' element={<Car />}/> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
+            <Route path="/ayuda" element={<Ayuda/>}/>
           </Routes>
 
           <Footer />

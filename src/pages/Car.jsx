@@ -3,10 +3,7 @@
 const Car = () => {
   return (
     <div>
-        <h1>Carrito de Compras</h1>
-        <form action="">
-        
-        </form>
+        <h1>Carrito de Compras</h1> 
     </div>
   )
 }

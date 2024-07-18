@@ -1,6 +1,11 @@
-
+import { useNavigate } from "react-router-dom"
 
 const SubHeader = () => {
+  const navigate = useNavigate()
+
+  const handleAyudaClick=()=>{
+    navigate('/ayuda')
+  }
   return (
     <>
     <div className='sub-header'>
@@ -11,7 +16,7 @@ const SubHeader = () => {
             <button>Descuentos</button>
         </div>
         <div>
-            <button>Ayuda</button>
+            <button onClick={handleAyudaClick}>Ayuda</button>
         </div>
 
     </div>
