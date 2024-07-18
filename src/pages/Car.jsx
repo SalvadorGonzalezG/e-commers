@@ -2,7 +2,12 @@
 
 const Car = () => {
   return (
-    <div>Carito de compras</div>
+    <div>
+        <h1>Carrito de Compras</h1>
+        <form action="">
+        
+        </form>
+    </div>
   )
 }
 
