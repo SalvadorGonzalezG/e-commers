@@ -1,6 +1,13 @@
 import { FiLogIn } from "react-icons/fi";
+import Register from "./Register";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  
+  const clickRegister=()=>{
+    navigate('/Register')
+  }
   return (
     <div className="login--container">
       <div>
@@ -18,8 +25,12 @@ const Login = () => {
           <input type="password" name="" id="" placeholder="crea una contraseña" /><br />
           <label htmlFor="">Confirma tu contraseña: </label>
           <input type="text" placeholder="Confirma tu contraseña" /> <br />
-          <button type="submit">enviar</button>
-
+          <button type="submit">enviar</button> 
+          <p className="register"> Si no te tienes una cuneta da click aqui
+          </p>
+          <a onClick={clickRegister} className="register" >
+            <Register/>
+            </a>
 
         </form>
       </div>

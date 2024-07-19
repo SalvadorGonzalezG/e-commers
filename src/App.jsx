@@ -6,6 +6,7 @@ import Login from "./pages/Login"
 import Car from "./pages/Car" // importando el compornente car.
 import Ayuda from "./pages/Ayuda"
 import Outlet from "./pages/Outlet"
+import Register from "./pages/Register"
 import Descuentos from "./pages/Descuentos"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
@@ -13,6 +14,7 @@ import { useState } from "react"
 function App() {
   {/*Estado para controlar si se se muestra el Menu o el Login */}
  const [isLogin, setIsLogin] = useState(false)
+
 
  const handleLoginClick = () =>{
   setIsLogin(true)
@@ -27,12 +29,13 @@ function App() {
 
           <SubHeader />
           <Routes>
-            <Route path="/" element={isLogin ? <Login/> :<Menu/>} />
+            <Route path="/" element={isLogin ? <Login/> :<Menu />} />
             <Route path="/login" element={<Login/>}/>
             <Route path='/car' element={<Car />}/> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
             <Route path="/ayuda" element={<Ayuda/>}/>
             <Route path='/outlet' element={<Outlet/>} />
-            <Route path="descuentos" element={<Descuentos/>} />
+            <Route path="/descuentos" element={<Descuentos/>} />
+            <Route path="/register" element={<Register/>} />
           </Routes>
 
           <Footer />
