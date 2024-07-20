@@ -29,7 +29,7 @@ function App() {
 
           <SubHeader />
           <Routes>
-            <Route path="/" element={isLogin ? <Login/> :<Menu />} />
+            <Route path="/home" element={isLogin ? <Login/> :<Menu />} />
             <Route path="/login" element={<Login/>}/>
             <Route path='/car' element={<Car />}/> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
             <Route path="/ayuda" element={<Ayuda/>}/>

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { AiOutlineHome } from "react-icons/ai";
 
 const SubHeader = () => {
   const navigate = useNavigate()
@@ -12,9 +13,13 @@ const SubHeader = () => {
   const handleDescuentoClick = () => {
     navigate('/descuentos')
   }  
+  const handleHomeClick=() =>{
+    navigate('/home')
+  }
   return (
     <>
     <div className='sub-header'>
+      <div><button onClick={handleHomeClick}><AiOutlineHome/></button></div>
         <div>
             <button onClick={handleOutletClick}>Outlet</button>
         </div>

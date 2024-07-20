@@ -194,15 +194,14 @@ color: azure;
   background-color: rgb(111, 156, 254);
 }
 .register{
-  
-  margin: 1px;
-  color: rgb(245, 232, 232);
-  text-decoration: none;
-}
-.register h3{
-  
+  text-align: center;
   margin: 5px;
-  color: rgb(16, 13, 13);
+  color: rgb(245, 232, 232);
+
+}
+.register a{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 
