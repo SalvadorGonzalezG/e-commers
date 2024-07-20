@@ -1,9 +1,11 @@
+import { useState } from "react"
 
+const Car = ({valor}) => {
+  // inicializamos el estado del contador
 
-const Car = () => {
   return (
     <div>
-      <h1>Carrito de Compras</h1>
+      <h1>Carrito de Comprastiene: {valor} compras.</h1>
     </div>
   )
 }

@@ -14,7 +14,7 @@ const SubHeader = () => {
     navigate('/descuentos')
   }  
   const handleHomeClick=() =>{
-    navigate('/home')
+    navigate('')
   }
   return (
     <>

@@ -14,11 +14,17 @@ import { useState } from "react"
 function App() {
   {/*Estado para controlar si se se muestra el Menu o el Login */}
  const [isLogin, setIsLogin] = useState(false)
+ //inicializando el contador 
+ const [valor, setValor] = useState(0)
 
+  const masValor=()=>{
+    setValor(valor + 1);
+  }
 
  const handleLoginClick = () =>{
   setIsLogin(true)
  }
+ console.log(valor)
   return (
     <>
 {/*Peparando el enrutador */}
@@ -29,10 +35,10 @@ function App() {
 
           <SubHeader />
           <Routes>
-            <Route path="/home" element={isLogin ? <Login/> :<Menu />} />
+            <Route path="" element={isLogin ? <Login/> :<Menu />} />
             <Route path="/login" element={<Login/>}/>
-            <Route path='/car' element={<Car />}/> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
-            <Route path="/ayuda" element={<Ayuda/>}/>
+            <Route path='/car' element={<Car valor={valor} />} /> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
+            <Route path="/ayuda" element={<Ayuda masValor={masValor} />} />
             <Route path='/outlet' element={<Outlet/>} />
             <Route path="/descuentos" element={<Descuentos/>} />
             <Route path="/register" element={<Register/>} />

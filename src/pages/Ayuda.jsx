@@ -1,8 +1,14 @@
 
-const Ayuda = () => {
+const Ayuda = ({ masValor }) => {
+
+
   return (
-    <div>Ayuda</div>
+    <>
+    <div>
+    <button onClick={masValor} >Incrementar compras</button>
+    </div>
+    </>
   )
 }
 
-export default Ayuda
+export default Ayuda;

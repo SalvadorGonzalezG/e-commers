@@ -4,14 +4,13 @@ import { usersData } from '../data/users'
 import { GiShoppingCart } from "react-icons/gi";
 import { IoAdd } from "react-icons/io5";
 
-
-const Menu = ({addToCart}) => {
+const Menu = () => {
   const [items, setItems] = useState([]);
-  
+
   //const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const containerRef = useRef(null);
-
+  //prueba contador para ocupar los articulos.
   useEffect(() => {
     // Simula la carga de datos al montar el componente
     fetchItems();
@@ -51,63 +50,41 @@ const Menu = ({addToCart}) => {
       fetchItems();
     }
   };
-  
-
   return (
-    <div className="menu">
-      <div className="menu-container">
-        <div className="grid-container" ref={containerRef}>
-          {items.length === 0 && !loading && <p>No items to display.</p>}
-          {items.map((item, index) => (
-            <div key={index} className="grid-item">
-              <div className='more-info'>
-                <button><IoAdd />
-                </button>
-              </div>
-              <div>
-                <img className='img-central' src={item.img} alt="img" />
-              </div>
-              <div className='contenido'>
-                <section>
+    <>
+      <div className="menu">
+        <div className="menu-container">
+          <div className="grid-container" ref={containerRef}>
+            {items.length === 0 && !loading && <p>No items to display.</p>}
+            {items.map((item, index) => (
+              <div key={index} className="grid-item">
+                <div className='more-info'>
+                  <button><IoAdd />
+                  </button>
+                </div>
+                <div>
+                  <img className='img-central' src={item.img} alt="img" />
+                </div>
+                <div className='contenido'>
+                  <section>
+                    <h2> <i>ID:</i> {item.id}</h2>
+                    <i>name</i> {item.name} <br />
+                    <i>age:</i> {item.age} <br />
+                    <i>pais:</i> {item.pais} <br />
+                    <b>
+                      <i>@mail</i> {item.mail}
+                    </b>
+                  </section>
+                  <button className='btn-buy' ><GiShoppingCart /> agregar</button>
+                </div>
 
-                  <h2> <i>ID:</i> {item.id}</h2>
-                  <i>name</i> {item.name} <br />
-                  <i>age:</i> {item.age} <br />
-                  <i>pais:</i> {item.pais} <br />
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                  <b>
-                    <i>@mail</i> {item.mail}
-                  </b>
-                </section>
-                <button className='btn-buy' ><GiShoppingCart /> agregar</button>
               </div>
-              
-            </div>
-          ))}
+            ))}
+          </div>
+          {loading && <p>Loading...</p>}
         </div>
-        {loading && <p>Loading...</p>}
       </div>
-    </div>
+    </>
   );
 };
 
