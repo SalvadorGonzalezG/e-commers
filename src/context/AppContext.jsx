@@ -10,13 +10,22 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
     // inicializamos nuestro estado y una funcion para actualizarlo.
     const [value, setValue] = useState(0);
+    const [items, setItems] = useState([])
+
+    // f: para agregar un item a la lista de items.
+    const addItem=(item)=>{
+        setItems((prevItems)=>[...prevItems, item])
+    }
+
     // funcion para incrementar el valor en 1
     const moreValue = () => {
         setValue(value + 1);
     }
+
+    
     return (
         // Provedor del contexto  que pasa el estado (value) y la funcion para actualizarlo (moreValue) a los componentes hijos
-        <AppContext.Provider value={{ value, moreValue }}>
+        <AppContext.Provider value={{ value, moreValue, addItem, items}}>
             {children}
         </AppContext.Provider>
     )

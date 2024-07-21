@@ -3,11 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import { usersData } from '../data/users'
 import { GiShoppingCart } from "react-icons/gi";
 import { IoAdd } from "react-icons/io5";
+import {useAppContext} from '../context/AppContext'
 
 const Menu = () => {
-  const [items, setItems] = useState([]);
 
-  //const [page, setPage] = useState(1);
+  const {addItem} = useAppContext();
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const containerRef = useRef(null);
   //prueba contador para ocupar los articulos.
@@ -75,7 +76,7 @@ const Menu = () => {
                       <i>@mail</i> {item.mail}
                     </b>
                   </section>
-                  <button className='btn-buy' ><GiShoppingCart /> agregar</button>
+                  <button className='btn-buy' onClick={()=>addItem(item)} ><GiShoppingCart /> agregar</button>
                 </div>
 
               </div>
