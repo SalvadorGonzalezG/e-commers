@@ -19,13 +19,21 @@ export const AppProvider = ({ children }) => {
 
     // funcion para incrementar el valor en 1
     const moreValue = () => {
+        if(value>=0){
         setValue(value + 1);
     }
+}
+    // funcion para decrementar
+    const lessValue = ()=>{
+        if(value>0){
+        setValue(value - 1)
+    }
+}
 
     
     return (
         // Provedor del contexto  que pasa el estado (value) y la funcion para actualizarlo (moreValue) a los componentes hijos
-        <AppContext.Provider value={{ value, moreValue, addItem, items}}>
+        <AppContext.Provider value={{ value, moreValue, lessValue, addItem, items}}>
             {children}
         </AppContext.Provider>
     )

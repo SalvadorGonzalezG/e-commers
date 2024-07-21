@@ -5,7 +5,7 @@ import { IoAdd } from "react-icons/io5";
 
 const Car = () => {
   // Usamos el hook personalizado para acceder al estado y la funcion de actualización de contexto
-  const { value, moreValue, items } = useAppContext();
+  const {lessValue, value, moreValue, items } = useAppContext();
 
 
   return (
@@ -46,7 +46,12 @@ const Car = () => {
                       <i>@mail</i> {item.mail}
                     </b>
                   </section>
-                  
+                </div>
+                {/*Colocamos los botones para sumar cuantos articulos se te cobraran */}
+                <div className="buttonMoreLess">
+                <button onClick={lessValue}>-</button>
+                <section>{value}</section>
+                <button onClick={moreValue}>+</button>
                 </div>
                 </div>
                 )}

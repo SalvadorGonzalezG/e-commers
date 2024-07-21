@@ -203,6 +203,9 @@ color: azure;
   cursor: pointer;
   text-decoration: underline;
 }
+.buttonMoreLess{
+  display: flex;
+}
 
 
 @media (max-width: 824px) {
