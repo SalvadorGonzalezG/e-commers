@@ -10,22 +10,18 @@ import Register from "./pages/Register"
 import Descuentos from "./pages/Descuentos"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
+import { AppProvider } from "./context/AppContext"
 
 function App() {
   {/*Estado para controlar si se se muestra el Menu o el Login */}
  const [isLogin, setIsLogin] = useState(false)
- //inicializando el contador 
- const [valor, setValor] = useState(0)
-
-  const masValor=()=>{
-    setValor(valor + 1);
-  }
-
+ 
  const handleLoginClick = () =>{
   setIsLogin(true)
  }
- console.log(valor)
+ 
   return (
+    
     <>
 {/*Peparando el enrutador */}
     <Router>
@@ -37,8 +33,8 @@ function App() {
           <Routes>
             <Route path="" element={isLogin ? <Login/> :<Menu />} />
             <Route path="/login" element={<Login/>}/>
-            <Route path='/car' element={<Car valor={valor} />} /> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
-            <Route path="/ayuda" element={<Ayuda masValor={masValor} />} />
+            <Route path='/car' element={<Car />} /> {/*Rota para el carrito de compras y pasamos el estado del carrito*/}
+            <Route path="/ayuda" element={<Ayuda />} />
             <Route path='/outlet' element={<Outlet/>} />
             <Route path="/descuentos" element={<Descuentos/>} />
             <Route path="/register" element={<Register/>} />
@@ -48,7 +44,6 @@ function App() {
 
         </div>
     </Router>
-
     </>
   )
 }
