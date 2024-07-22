@@ -49,9 +49,9 @@ const Car = () => {
                 </div>
                 {/*Colocamos los botones para sumar cuantos articulos se te cobraran */}
                 <div className="buttonMoreLess">
-                <button onClick={lessValue}>-</button>
-                <section>{value}</section>
-                <button onClick={moreValue}>+</button>
+                <button onClick={()=>lessValue(item.id)}>-</button>
+                <section>{item.count}</section>
+                <button onClick={()=>moreValue(item.id)}>+</button>
                 </div>
                 </div>
                 )}

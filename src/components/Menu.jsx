@@ -80,11 +80,7 @@ const Menu = () => {
                       <i>@mail</i> {item.mail}
                     </b>
                   </section>
-                  <button className='btn-buy' onClick={(e)=> {
-                  e.preventDefault();
-                    addItem(item);
-                    notify()
-                    notify()}}>
+                  <button className='btn-buy' onClick={()=> addItem(item)}>
                       <GiShoppingCart /> agregar</button>
                     <ToastContainer/>
                 </div>
