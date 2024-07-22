@@ -4,9 +4,12 @@ import { usersData } from '../data/users'
 import { GiShoppingCart } from "react-icons/gi";
 import { IoAdd } from "react-icons/io5";
 import {useAppContext} from '../context/AppContext'
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Menu = () => {
-
+  //f que arroja la notificación cunado agregad un articulo al carrito.
+  const notify = () => toast.success(`Se a agregado al carrito de compra`) 
   const {addItem} = useAppContext();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -60,8 +63,9 @@ const Menu = () => {
             {items.map((item, index) => (
               <div key={index} className="grid-item">
                 <div className='more-info'>
-                  <button><IoAdd />
+                  <button onClick={notify}><IoAdd />
                   </button>
+                  <ToastContainer/>
                 </div>
                 <div>
                   <img className='img-central' src={item.img} alt="img" />
@@ -76,7 +80,13 @@ const Menu = () => {
                       <i>@mail</i> {item.mail}
                     </b>
                   </section>
-                  <button className='btn-buy' onClick={()=>addItem(item)} ><GiShoppingCart /> agregar</button>
+                  <button className='btn-buy' onClick={(e)=> {
+                  e.preventDefault();
+                    addItem(item);
+                    notify()
+                    notify()}}>
+                      <GiShoppingCart /> agregar</button>
+                    <ToastContainer/>
                 </div>
 
               </div>
