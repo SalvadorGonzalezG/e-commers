@@ -21,7 +21,8 @@ export const usersData = [
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai11}`
+        img: `${ai11}`,
+        price: ''
 
     },{
         id: 2,
@@ -29,35 +30,40 @@ export const usersData = [
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai}`
+        img: `${ai}`,
+        price: ''
     },{
         id: 3,
         name: 'Sandro',
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai1}`
+        img: `${ai1}`,
+        price: ''
     },{
         id: 4,
         name: 'Angeles',
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai2}`
+        img: `${ai2}`,
+        price: ''
     },{
         id: 5,
         name: 'Rock',
         age: 29,
         mail: 'rob@CiMail.com',
         pais: 'Naucalpan',
-        img: `${ai3}`
+        img: `${ai3}`,
+        price: ''
     },{
         id: 6,
         name: 'Ñeñe',
         age: 32,
         mail: 'Ñene@CiMail.com',
         pais: 'Iztapalapa',
-        img: `${ai4}`
+        img: `${ai4}`,
+        price: ''
     },
     {
         id: 7,
@@ -65,21 +71,24 @@ export const usersData = [
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai5}`
+        img: `${ai5}`,
+        price: ''
     },{
         id: 8,
         name: 'Will',
         age: 9,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai6}`
+        img: `${ai6}`,
+        price: ''
     },{
         id: 9,
         name: 'Ñeñe',
         age: 32,
         mail: 'Ñene@CiMail.com',
         pais: 'Iztapalapa',
-        img: `${ai7}`
+        img: `${ai7}`,
+        price: ''
     },
     {
         id: 10,
@@ -87,20 +96,23 @@ export const usersData = [
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai8}`
+        img: `${ai8}`,
+        price: ''
     },{
         id: 11,
         name: 'Angeles',
         age: 23,
         mail: 'rob@CiMail.com',
         pais: 'cdmx',
-        img: `${ai9}`
+        img: `${ai9}`,
+        price: ''
     },{
         id: 12,
         name: 'Rock',
         age: 29,
         mail: 'rob@CiMail.com',
         pais: 'Naucalpan',
-        img: `${ai10}`
+        img: `${ai10}`,
+        price: ''
     }
 ]
