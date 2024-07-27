@@ -10,7 +10,7 @@ import Register from "./pages/Register"
 import Descuentos from "./pages/Descuentos"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from "react"
-import { AppProvider } from "./context/AppContext"
+
 
 function App() {
   {/*Estado para controlar si se se muestra el Menu o el Login */}
