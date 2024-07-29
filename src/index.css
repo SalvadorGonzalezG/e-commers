@@ -207,7 +207,9 @@ color: azure;
   display: flex;
 }
 
-
+.buyCarTitle{
+  text-align: center;
+}
 @media (max-width: 824px) {
   .grid-container {
     display: grid;
